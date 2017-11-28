@@ -1,7 +1,10 @@
 import stocks from '../../data/stocks';
 
-//ToDo: Create const called state that is a data object{}
-    //ToDo: Create an array called stocks inside the state object
+//ToDo: Create const called state that is a data object{} done
+const state = {
+    stocks: []
+}
+    //ToDo: Create an array called stocks inside the state object done
 
 
 //ToDo: Create const called mutations that is a data object{}
