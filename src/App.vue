@@ -21,6 +21,8 @@
         //ToDo: Initialize Header component and name it appHeader done
         components: {
             appHeader: Header
+
+
         }
 
         //ToDo: On page creation dispatch 'initStocks' to the vuex $store
