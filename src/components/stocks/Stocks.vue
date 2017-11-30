@@ -1,7 +1,7 @@
 <template>
     <div>
         <!--ToDo: Load app-stock component done -->
-        <app-stock></app-stock>
+        <app-stock v-for="stock in stocks" :stock="stock"></app-stock>
             <!--ToDo: Loop through stock in stocks using v-for-->
             <!--ToDo: Bind to stock using : and pass stock from the v-for-->
     </div>
@@ -18,7 +18,7 @@
         },
 
         computed: {
-            //ToDo: Create stocks computer method -- done
+            //ToDo: Create stocks computed method -- done
             stocks() {
                 return $store.getters.stocks
             }
