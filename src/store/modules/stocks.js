@@ -1,21 +1,31 @@
 import stocks from '../../data/stocks';
 
-//ToDo: Create const called state that is a data object{} done
+//ToDo: Create const called state that is a data object{} -- done
 const state = {
     stocks: []
-}
-    //ToDo: Create an array called stocks inside the state object done
+};
+    //ToDo: Create an array called stocks inside the state object -- done
 
 
-//ToDo: Create const called mutations that is a data object{}
-    //ToDo: Inside mutations object create a vuex method called 'SET_STOCKS' that takes two parameters (state, stocks)
-        //ToDo: Inside 'SET_STOCKS' set state.stocks equal to stocks
+//ToDo: Create const called mutations that is a data object{} -- done
+    //ToDo: Inside mutations object create a vuex method called 'SET_STOCKS' that takes two parameters (state, stocks) -- done
+        //ToDo: Inside 'SET_STOCKS' set state.stocks equal to stocks -- done
+const mutations = {
+    'SET_STOCKS': (state, stocks) => {
+        state.stocks = stocks;
+    },
+
 
     //ToDo: Inside mutations object create a vuex method called 'RND_STOCKS' that takes one parameter (state)
-        //ToDo: Inside 'RND_STOCKS' your will create a state.stocks.forEach that is a point function that passes stock
-            //ToDo: Set stock.price equal to Math.round() passing stock.price * (1 + Math.random() - 0.5)
+    //ToDo: Inside 'RND_STOCKS' your will create a state.stocks.forEach that is a point function that passes stock
+    //ToDo: Set stock.price equal to Math.round() passing stock.price * (1 + Math.random() - 0.5)
+    'RND_STOCKS': (state) => {
+      state.stocks.forEach(stock => {
+          stock.price = Math.round(stock.price * (1 + Math.random() - 0.5))
+        });
 
-
+    }
+}
 const actions = {
 
     // Note: Use buyStock as reference for the comments below within actions
