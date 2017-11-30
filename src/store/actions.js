@@ -1,4 +1,4 @@
-//ToDo: Import vue and name it Vue
+//ToDo: Import vue and name it Vue -- done
 import Vue from 'vue'
 
 

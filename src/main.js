@@ -1,7 +1,7 @@
 //ToDo: Import vue and name it Vue -- done
 import Vue from 'vue'
 //ToDo: Import vue-router and name it VueRouter -- done
-import VueRouter from './App.vue'
+import VueRouter from 'vue-router'
 //ToDo: Import vue-resource and name it VueResource -- done
 import VueResource from 'vue-resource'
 
