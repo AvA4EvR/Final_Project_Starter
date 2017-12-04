@@ -2,34 +2,37 @@
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-                <!--ToDo: Create a router-link that goes to '/' root, add class navbar-brand and add Stock Trader text-->
+                <router-link to="/" class="navbar-brand" text="Stock Trader"></router-link>
+                <!--ToDo: Create a router-link that goes to '/' root, add class navbar-brand and add Stock Trader text done? -->
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <!--ToDo: Create router-link that goes to '/portfolio'
-                        <!--ToDo: set activeClass to "active", add tag attribute set to li, and add Portfolio text-->
-
+                        <!--ToDo: set activeClass to "active", add tag attribute set to li, and add Portfolio text done? -->
+                    <li><router-link to="/portfolio" :class="{ activeClass: active}" text="Portfolio"></router-link></li>
                     <!--ToDo: Create router-link that goes to '/stocks'
-                        <!--ToDo: set activeClass to "active", add tag attribute set to li, and add Stocks text-->
+                        <!--ToDo: set activeClass to "active", add tag attribute set to li, and add Stocks text done? -->
+                    <li><router-link to="/stocks" :class="{ activeClass: active}" text="Stocks"></router-link></li>
                 </ul>
                 <strong class="navbar-text navbar-right">Funds:
-                    <!--ToDo: Call funds computed function and pipe the currency filter that is created in main.js-->
+                    <!--ToDo: Call funds computed function and pipe the currency filter that is created in main.js done?-->
+                    {{ funds | currency }}
                 </strong>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <!--ToDo: Add click event to <a> that calls endDay method-->
-                        <a href="#" >End Day</a>
+                        <!--ToDo: Add click event to <a> that calls endDay method done?-->
+                        <a :click="endDay()" href="#" >End Day</a>
                     </li>
 
-                    <!--ToDo: Inside <li> Bind to class using :class that passes an object {} called open and set it to isDropdownOpen-->
-                        <!--ToDo: Add click event that toggles isDropdownOpen to true and false-->
-                    <li class="dropdown">
+                    <!--ToDo: Inside <li> Bind to class using :class that passes an object {} called open and set it to isDropdownOpen need to ask-->
+                        <!--ToDo: Add click event that toggles isDropdownOpen to true and false need to ask-->
+                    <li :class="{open: isDropdownOpen}" @click="isDropdownOpen = !isDropdownOpen" class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Save & Load <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <!--ToDo: Add click event that calls the saveData method-->
-                            <li><a href="#">Save Data</a></li>
+                            <li><a  @click="saveData()" href="#">Save Data</a></li>
                             <!--ToDo: Add click event that calls the loadData method-->
-                            <li><a href="#">Load Data</a></li>
+                            <li><a @click="loadData()"href="#">Load Data</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -39,7 +42,7 @@
 </template>
 
 <script>
-    //ToDo: Import mapActions from vuex
+    //ToDo: Import mapActions from vuex -- done
 
     import { mapActions } from 'vuex'
 
@@ -91,8 +94,8 @@
                     //ToDo: Set stocks: to the $store getters stocks -- done?
                 //ToDo: Outside the data object use $http, using .put pass 'data.json' and the data object -- done?
 
-            //ToDo: Create loadData method
-                //ToDo: Call fetchData()
+            //ToDo: Create loadData method -- done
+                //ToDo: Call fetchData() -- done?
         }
     }
 </script>
