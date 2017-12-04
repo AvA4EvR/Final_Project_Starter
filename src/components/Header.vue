@@ -41,15 +41,21 @@
 <script>
     //ToDo: Import mapActions from vuex
 
+    import mapActions from 'vuex'
+
     export default {
         data() {
           return {
-              //ToDo: Create data object called isDropdownOpen and set it to false
+              //ToDo: Create data object called isDropdownOpen and set it to false -- done
+              isDropdownOpen: false
           }
         },
         computed: {
-        //ToDo: Create a computed function called funds
-            //ToDo: Have funds() return this.$store.getters.funds
+            funds: function() {
+                return this.$store.getters.funds;
+            }
+        //ToDo: Create a computed function called funds -- done
+            //ToDo: Have funds() return this.$store.getters.funds -- done
         },
         methods: {
             //ToDo: Create ...mapActions method

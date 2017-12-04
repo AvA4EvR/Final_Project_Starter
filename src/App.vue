@@ -26,7 +26,7 @@
         methods: {
 
         }
-        //ToDo: On page creation dispatch 'initStocks' to the vuex $store
+        //ToDo: On page creation dispatch 'initStocks' to the vuex $store ? need to ask
     }
 </script>
 
