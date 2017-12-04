@@ -41,7 +41,7 @@
 <script>
     //ToDo: Import mapActions from vuex
 
-    import mapActions from 'vuex'
+    import { mapActions } from 'vuex'
 
     export default {
         data() {
@@ -58,19 +58,38 @@
             //ToDo: Have funds() return this.$store.getters.funds -- done
         },
         methods: {
-            //ToDo: Create ...mapActions method
-                //ToDo: Call randomizeStocks: 'randomizeStocks'
-                //ToDo: Call fetchData: 'loadData'
+            ...mapActions({
+                randomizeStocks: 'randomizeStocks',
+                fetchData: 'loadData'
+            }),
+            //ToDo: Create ...mapActions method -- done
+                //ToDo: Call randomizeStocks: 'randomizeStocks' -- done
+                //ToDo: Call fetchData: 'loadData' -- done
 
-            //ToDo: Create endDay method
-                //ToDo: Call randomizeStocks()
+            endDay: function() {
+                'randomizeStocks'
+            },
+            //ToDo: Create endDay method -- need to ask
+                //ToDo: Call randomizeStocks() -- need to ask
 
-            //ToDo: Create SaveData method
-                //ToDo: Create const called data that holds an object
-                    //ToDo: Set funds: to the $store getters funds
-                    //ToDo: Set stockPortfolio: to the $store getters stockPortfolio
-                    //ToDo: Set stocks: to the $store getters stocks
-                //ToDo: Outside the data object use $http, using .put pass 'data.json' and the data object
+            SaveData: function() {
+              const data = {
+                  funds: $store.getters.funds,
+                  stockPortfolio: $store.getters.stockPortfolio,
+                  stocks: $store.getters.stocks
+              }
+              this.$http.put('data.json', data);
+            },
+
+            loadData: function() {
+                'fetchData'
+            }
+            //ToDo: Create SaveData method -- done
+                //ToDo: Create const called data that holds an object -- done
+                    //ToDo: Set funds: to the $store getters funds -- done?
+                    //ToDo: Set stockPortfolio: to the $store getters stockPortfolio -- done?
+                    //ToDo: Set stocks: to the $store getters stocks -- done?
+                //ToDo: Outside the data object use $http, using .put pass 'data.json' and the data object -- done?
 
             //ToDo: Create loadData method
                 //ToDo: Call fetchData()
