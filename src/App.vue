@@ -29,7 +29,7 @@
         created() {
             this.$store.dispatch('initStocks')
         }
-        //ToDo: On page creation dispatch 'initStocks' to the vuex $store
+        //ToDo: On page creation dispatch 'initStocks' to the vuex $store -- done
     }
 </script>
 

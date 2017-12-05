@@ -68,12 +68,12 @@
 
             sellStock: function(){
                 const order = {
-                    stockId: stock.id,
-                    stockPrice: stock.price,
-                    quantity: quantity
+                    stockId: this.stock.id,
+                    stockPrice: this.stock.price,
+                    quantity: this.quantity
                 }
                 this.placeSellOrder(order)
-                quantity = 0
+                this.quantity = 0
             }
 
             //ToDo: Create sellStock method -- done

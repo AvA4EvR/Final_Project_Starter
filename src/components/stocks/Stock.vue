@@ -65,12 +65,12 @@
         methods: {
             buyStock: function() {
                 const order = {
-                    stockId: stock.id,
-                    stockPrice: stock.price,
-                    quantity: quantity
+                    stockId: this.stock.id,
+                    stockPrice: this.stock.price,
+                    quantity: this.quantity
                 }
                 this.$store.dispatch('buyStock', order)
-                quantity = 0
+                this.quantity = 0
             }
             //ToDo: Create buyStock method -- done
                 //ToDo: Create const called order that holds an object -- done

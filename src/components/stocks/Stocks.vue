@@ -19,7 +19,7 @@
 
         computed: {
             //ToDo: Create stocks computed method -- done
-            stocks() {
+            stocks: function() {
                 return this.$store.getters.stocks
             }
                 // ToDo: Return $store.getters.stocks -- done
