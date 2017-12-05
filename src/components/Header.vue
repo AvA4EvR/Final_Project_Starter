@@ -2,17 +2,17 @@
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-                <router-link to="/" class="navbar-brand" text="Stock Trader"></router-link>
+                <router-link to="/" class="navbar-brand">Stock Trader</router-link>
                 <!--ToDo: Create a router-link that goes to '/' root, add class navbar-brand and add Stock Trader text done? -->
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <!--ToDo: Create router-link that goes to '/portfolio'
-                        <!--ToDo: set activeClass to "active", add tag attribute set to li, and add Portfolio text done? -->
-                    <li><router-link to="/portfolio" :class="{ activeClass: active}" text="Portfolio"></router-link></li>
+                        <!--ToDo: set activeClass to "active", add tag attribute set to li, and add Portfolio text done? (look up activeClass)-->
+                    <li><router-link to="/portfolio" activeClass="active">Portflio</router-link></li>
                     <!--ToDo: Create router-link that goes to '/stocks'
                         <!--ToDo: set activeClass to "active", add tag attribute set to li, and add Stocks text done? -->
-                    <li><router-link to="/stocks" :class="{ activeClass: active}" text="Stocks"></router-link></li>
+                    <li><router-link to="/stocks" activeClass="active">Stocks</router-link></li>
                 </ul>
                 <strong class="navbar-text navbar-right">Funds:
                     <!--ToDo: Call funds computed function and pipe the currency filter that is created in main.js done?-->
@@ -21,7 +21,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li>
                         <!--ToDo: Add click event to <a> that calls endDay method done?-->
-                        <a :click="endDay()" href="#" >End Day</a>
+                        <a @click="endDay" href="#" >End Day</a>
                     </li>
 
                     <!--ToDo: Inside <li> Bind to class using :class that passes an object {} called open and set it to isDropdownOpen need to ask-->
@@ -30,9 +30,9 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Save & Load <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <!--ToDo: Add click event that calls the saveData method-->
-                            <li><a  @click="saveData()" href="#">Save Data</a></li>
+                            <li><a  @click="saveData" href="#">Save Data</a></li>
                             <!--ToDo: Add click event that calls the loadData method-->
-                            <li><a @click="loadData()"href="#">Load Data</a></li>
+                            <li><a @click="loadData"href="#">Load Data</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -70,32 +70,32 @@
                 //ToDo: Call fetchData: 'loadData' -- done
 
             endDay: function() {
-                'randomizeStocks'
+                this.randomizeStocks()
             },
             //ToDo: Create endDay method -- need to ask
                 //ToDo: Call randomizeStocks() -- need to ask
 
             SaveData: function() {
               const data = {
-                  funds: $store.getters.funds,
-                  stockPortfolio: $store.getters.stockPortfolio,
-                  stocks: $store.getters.stocks
+                  funds: this.$store.getters.funds,
+                  stockPortfolio: this.$store.getters.stockPortfolio,
+                  stocks: this.$store.getters.stocks
               }
               this.$http.put('data.json', data);
             },
 
             loadData: function() {
-                'fetchData'
+                this.fetchData()
             }
             //ToDo: Create SaveData method -- done
                 //ToDo: Create const called data that holds an object -- done
                     //ToDo: Set funds: to the $store getters funds -- done?
                     //ToDo: Set stockPortfolio: to the $store getters stockPortfolio -- done?
                     //ToDo: Set stocks: to the $store getters stocks -- done?
-                //ToDo: Outside the data object use $http, using .put pass 'data.json' and the data object -- done?
+                //ToDo: Outside the data object use $http, using .put pass 'data.json' and the data object -- done
 
             //ToDo: Create loadData method -- done
-                //ToDo: Call fetchData() -- done?
+                //ToDo: Call fetchData() -- done
         }
     }
 </script>

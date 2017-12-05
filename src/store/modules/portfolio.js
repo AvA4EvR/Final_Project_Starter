@@ -12,11 +12,11 @@ const state = {
                 record.quantity += quantity
             }
             else {
-                state.stocks.push(id: stockId, quantity: quantity)
+                state.stocks.push({id: stockId, quantity: quantity})
             }
         },
         'SELL_STOCK': (state, stockId, quantity, stockPrice) => {
-            const record = getters.stocks.find(element => element.id == stockId)
+            const record = state.stocks.find(element => element.id == stockId)
             if (record.quantity > quantity) {
                 record.quantity -= quantity
             }
@@ -44,7 +44,7 @@ const actions = {
 const getters = {
     stockPortfolio: (state, getters) => {
         return state.stocks.map()
-        const record = state.stocks.find(element => element.id == stockId)
+        const record = getters.stocks.find(element => element.id == stockId)
         return {
             id: stock.id,
             quantity: stock.quantity,
