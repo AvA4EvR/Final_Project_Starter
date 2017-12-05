@@ -16,7 +16,7 @@
                     <input v-model.number="quantity"
                             type="number"
                             class="form-control"
-                            :class="{danger: insufficientQuanity}"
+                            :class="{danger: insufficientQuantity}"
                             placeholder="Quantity">
                 </div>
                 <div class="pull-right">
