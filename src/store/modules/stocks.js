@@ -33,13 +33,13 @@ const actions = {
         commit('BUY_STOCK', order);
     },
 
-    initStocks: (commit) => {
+    initStocks: ({commit}) => {
         commit('SET_STOCKS', stocks);
     },
     //ToDo: Create initStocks that is a pointer function that passes {commit} -- done
         //ToDo: Use the commit method passing 'SET_STOCKS'  and stocks -- done?
 
-    randomizeStocks: (commit) => {
+    randomizeStocks: ({commit}) => {
         commit('RND_STOCKS');
     }
     //ToDo: Create randomizeStocks that is a pointer function that passes {commit} -- done

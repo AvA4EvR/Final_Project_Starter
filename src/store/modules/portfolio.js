@@ -51,7 +51,7 @@ const getters = {
         return state.funds
     }
 }
-//ToDo: Create const called mutations that is a data object{} -- NEED TO ASK
+//ToDo: Create const called mutations that is a data object{} -- done
     //ToDo: Inside mutations object create a vuex method called 'BUY_STOCK' that takes four parameters (state, {stockId, quantity, stockPrice} -- done
         //ToDo: Create const called record that is equal to state.stocks.find(element => element.id == stockId) -- done
         //ToDo: If (record) then set record.quantity += quantity -- done

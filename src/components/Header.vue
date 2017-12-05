@@ -72,10 +72,10 @@
             endDay: function() {
                 this.randomizeStocks()
             },
-            //ToDo: Create endDay method -- need to ask
-                //ToDo: Call randomizeStocks() -- need to ask
+            //ToDo: Create endDay method -- done
+                //ToDo: Call randomizeStocks() -- done
 
-            SaveData: function() {
+            saveData: function() {
               const data = {
                   funds: this.$store.getters.funds,
                   stockPortfolio: this.$store.getters.stockPortfolio,
@@ -89,9 +89,9 @@
             }
             //ToDo: Create SaveData method -- done
                 //ToDo: Create const called data that holds an object -- done
-                    //ToDo: Set funds: to the $store getters funds -- done?
-                    //ToDo: Set stockPortfolio: to the $store getters stockPortfolio -- done?
-                    //ToDo: Set stocks: to the $store getters stocks -- done?
+                    //ToDo: Set funds: to the $store getters funds -- done
+                    //ToDo: Set stockPortfolio: to the $store getters stockPortfolio -- done
+                    //ToDo: Set stocks: to the $store getters stocks -- done
                 //ToDo: Outside the data object use $http, using .put pass 'data.json' and the data object -- done
 
             //ToDo: Create loadData method -- done

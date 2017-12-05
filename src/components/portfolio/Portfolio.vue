@@ -3,10 +3,7 @@
         <!--ToDo: Load app-stock component done-->
             <!--ToDo: Loop through stock in stocks using v-for done-->
             <!--ToDo: Bind to stock using : and pass stock from the v-for done-->
-        <app-stock>
-            <div v-for="stock in stocks" :stock="stock">
-            </div>
-        </app-stock>
+        <app-stock v-for="stock in stocks" :stock="stock"></app-stock>
     </div>
 </template>
 
