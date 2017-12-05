@@ -56,7 +56,7 @@ const getters = {
         //ToDo: Return state.stocks -- done
 
 export default {
-    //ToDo: Export the const state, mutations, actions, and getters
+    //ToDo: Export the const state, mutations, actions, and getters -- done
     state,
     mutations,
     actions,
