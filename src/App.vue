@@ -25,8 +25,11 @@
 
         methods: {
 
+        },
+        created() {
+            this.$store.dispatch('initStocks')
         }
-        //ToDo: On page creation dispatch 'initStocks' to the vuex $store ? need to ask
+        //ToDo: On page creation dispatch 'initStocks' to the vuex $store
     }
 </script>
 
