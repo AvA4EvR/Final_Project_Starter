@@ -32,7 +32,7 @@
                             <!--ToDo: Add click event that calls the saveData method-->
                             <li><a  @click="saveData" href="#">Save Data</a></li>
                             <!--ToDo: Add click event that calls the loadData method-->
-                            <li><a @click="loadData"href="#">Load Data</a></li>
+                            <li><a @click="loadData" href="#">Load Data</a></li>
                         </ul>
                     </li>
                 </ul>
